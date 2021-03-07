@@ -53,6 +53,14 @@ def rob(nums):
     return new_nums[-1]
 
 
+def rob(nums):
+    # trying to do this again for funsies, see if I retained any of my memory of how to tackle this problem
+    # at each position, we want max(n + n-2, n-1)
+    nums.insert(0, 0)
+    for i in range(2, len(nums)):
+        nums[i] = max(nums[i] + nums[i-2], nums[i-1])
+    return nums[-1]
+
 if __name__ == '__main__':
     nums = [10, 8, 6, 4, 2, 5]
     res = rob(nums)
