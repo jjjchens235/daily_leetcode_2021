@@ -10,6 +10,9 @@ def isSubsequence(s, t):
             return True
     return False
 
+def isSubsequence(s, t):
+    #lets try binary search this time
+
 
 if __name__ == '__main__':
     s = 'axc'
