@@ -47,9 +47,22 @@ I want to follow the following routine for each problem, taken from Cracking the
 
 #### 387 First Unique Char in a string
 1. Logic
-	- df
+	- Two loops non-nested. First loop gets the count of occurences of each char as a counter object/dict. 
+	- Second loop checks each char against the Counter, if the occurence is 1, then return the char's index
 2. Experience
-	- df
+	- It took me around 5 minutes to figure out how to do this, I initially thought of using a counter, but assumed it would end up being n^2
 3. Takeaways
-	- df
+	- 
 
+#### reverse intenger
+1. Logic
+	- #start, keep track if is_negative
+  - main logic: to get the last digit of a number mod by 10
+  - add that digit to a string
+  - Then remove that digit by // 10
+  - end: check if is_negative, if true, add a negative sign to the string
+2. Experience
+	- This one sucked, I got the main logic after talking with Shing about this problem, but I had some issues with dealing with negative numbers
+3. Takeaways
+ - Don't forget your solution when actually coding it out, I knew what I had to do with negative numbers but lost sight of it
+ - % 10 returns the last digit of any number
