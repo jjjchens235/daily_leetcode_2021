@@ -51,18 +51,35 @@ I want to follow the following routine for each problem, taken from Cracking the
 	- Second loop checks each char against the Counter, if the occurence is 1, then return the char's index
 2. Experience
 	- It took me around 5 minutes to figure out how to do this, I initially thought of using a counter, but assumed it would end up being n^2
-3. Takeaways
-	- 
 
 #### reverse intenger
 1. Logic
-	- #start, keep track if is_negative
-  - main logic: to get the last digit of a number mod by 10
-  - add that digit to a string
-  - Then remove that digit by // 10
-  - end: check if is_negative, if true, add a negative sign to the string
+	- start, keep track if is_negative
+	- main logic: to get the last digit of a number mod by 10
+	- add that digit to a string
+	- Then remove that digit by // 10
+	- end: check if is_negative, if true, add a negative sign to the string
 2. Experience
 	- This one sucked, I got the main logic after talking with Shing about this problem, but I had some issues with dealing with negative numbers
 3. Takeaways
- - Don't forget your solution when actually coding it out, I knew what I had to do with negative numbers but lost sight of it
- - % 10 returns the last digit of any number
+	- Don't forget your solution when actually coding it out, I knew what I had to do with negative numbers but lost sight of it
+	- % 10 returns the last digit of any number
+
+#### valid anagram
+1. Logic: 
+	- I converted each string to a Counter, then compared the counter agianst each other.
+	- If Counter is not allowed, then have one for loop and within the same loop, using seperate dicts for each string add the respective character to the respective dictionary, then compare the dictionaries against each other
+
+#### valid palindrome
+1. Logic
+	- clean the string using regex, and lower case it
+	- Compared cleaned string reversed [::-1] vs itself
+2. Takeaways
+	- \^[a-z] means match all strings that start with a-z, whereas I needed to exclude a-z, so I would use [^a-zA-Z\d], note that I cannot use [^\w\d] because that includes _
+
+
+#### 28: needle in the haystack (implement strstr)
+1. Logic
+	- Keep two pointers (actually only need 1, but it's easier to conceptualize as two), called start and end, where start and end capture the full substring length. For each haystack[start: end+1] substring compare it to needle
+2. Takeaways
+ 	- I had to think about this problem quite a bit with regards to indexing and the correct conditions. After I decided to make start the beginning of the substring, and end the last index of the substring, it became much easier to conceptualize, because that meant end < len(needle), and for slicing it was always haystack[start: end + 1]
