@@ -83,3 +83,15 @@ I want to follow the following routine for each problem, taken from Cracking the
 	- Keep two pointers (actually only need 1, but it's easier to conceptualize as two), called start and end, where start and end capture the full substring length. For each haystack[start: end+1] substring compare it to needle
 2. Takeaways
  	- I had to think about this problem quite a bit with regards to indexing and the correct conditions. After I decided to make start the beginning of the substring, and end the last index of the substring, it became much easier to conceptualize, because that meant end < len(needle), and for slicing it was always haystack[start: end + 1]
+
+#### 38: Count and Say
+1. Logic
+	- Check if current character is the last repeating character. If not, continue incrementing count. If it is the last character, need to update the result string with (count) + (digit), and thenreset counter to 1.
+	- To make things easier, add a placeholder char to the end
+2. Experience
+	- This one took a lot of time, and it was hard to solve, I wasn't sure if I should compare current against prev character or next characters
+	- Wasn't fully sure on the conditional statements either
+3. Takeaways
+	- This problem is worth doing again, there's something about it that I find very tricky, even though it's not a complex problem
+
+
