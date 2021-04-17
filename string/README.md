@@ -94,4 +94,25 @@ I want to follow the following routine for each problem, taken from Cracking the
 3. Takeaways
 	- This problem is worth doing again, there's something about it that I find very tricky, even though it's not a complex problem
 
+#### 14: Longest Common Prefix
+1. Logic
+	- Get the shortest str in the list
+	- Compare the shortest str in the list against every item in the list starting at position 0
+	- If shortest doesn't match a certain character of another string, remove that character and all subsequent characters from shortest
+2. Experience
+	- My first solution was pretty convolted, I used a dictionary of the first string in the list, and compared all values against this dictionary, and kept a minimum count of matched words
+3. Takeaways
+	- Shouldn't always default to dictionaries, when comparing strings against each other, oftentimes using list notation is good enough
+
+####  26: remove duplicates
+1. Logic
+	- If the current number == prev number, delete the current number
+2. Experience
+	- So LC is able to check not enough your return value, but also the internal list value to make sure you modified it in place
+3. Takeaways
+	- When deleting from an array:
+		- you need to use a while loop or else your indexes get messed up.
+		- don't increment when you delete
+
+
 
