@@ -104,15 +104,3 @@ I want to follow the following routine for each problem, taken from Cracking the
 3. Takeaways
 	- Shouldn't always default to dictionaries, when comparing strings against each other, oftentimes using list notation is good enough
 
-####  26: remove duplicates
-1. Logic
-	- If the current number == prev number, delete the current number
-2. Experience
-	- So LC is able to check not enough your return value, but also the internal list value to make sure you modified it in place
-3. Takeaways
-	- When deleting from an array:
-		- you need to use a while loop or else your indexes get messed up.
-		- don't increment when you delete
-
-
-
