@@ -85,3 +85,35 @@ I want to follow the following routine for each problem, taken from Cracking the
 	- To get O(n) solution one pass solution, you need to use a set, append all numbers, and then remove from set when that number appears the 2nd time.
 	- Also, I didn't realize that all numbers either occured once or twice, I thought duplicates could appear more than once, I need to be careful about these little details because the set solution requires duplicates only appearing twice
 
+
+### intersection
+
+1. Logic
+	- Simple solution using set, however, much harder if you have O(n) time and O(1) space complexity for sorted lists.
+2. Experience
+	- df
+3. Takeaways
+	- df
+
+### plus one
+1. Logic
+	- start from the end of the list
+  - for each number
+  - if 9, change it to 0 and continue looping
+  - else, add one to the digit and stop looping
+2. Experience
+	- df
+3. Takeaways
+	- df
+
+### move zeroes
+1. Logic
+	- keep track of our first zero
+  - keep track of current number
+  - if current number is non-zero, swap with zero, increment the zero counter by 1 (will always find the left-most zero)
+
+2. Experience
+	- df
+3. Takeaways
+	- df
+
