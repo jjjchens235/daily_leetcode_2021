@@ -111,9 +111,33 @@ I want to follow the following routine for each problem, taken from Cracking the
 	- keep track of our first zero
   - keep track of current number
   - if current number is non-zero, swap with zero, increment the zero counter by 1 (will always find the left-most zero)
-
 2. Experience
-	- df
+	- tough problem, wasn't sure if this was a two pointer solution first of all, and secondly, where the two pointers should go (beg, beg / beg, end / end, end)
 3. Takeaways
-	- df
+	- since we want to preserve order, meaing no swaps allowed, both pointers should start at the beginning
+	- Walking through the problem on paper with a good example helped a lot!
 
+### two sum
+1. Logic
+2. Takeaways
+	- Do it in one loop
+
+### rotate image
+1. Rotating an image by 90 dgs follows this math principle:
+	1 reverse row wise
+	- Transpose the first col to become the first row, and vice versa for all cols
+		- The tricky part is not transposing cells you already transpose
+2. Experience: it took me a long time that I was transposing cells that I already had transposed previoiusly
+3. Takeaways
+	1. Still not that confident in 2 dimensional arrays, I think it's best to think of it like Excel where the first number is the row (i) and the second number (j) is the col.
+
+
+### valid sudoku
+1. Check all items in list are not the same
+2. Check All the items in each list with the same index
+3. Check all items between board[i] : board[i+2], and board[i][j] : board[i][j+2]
+4. Create 3 list of 9 sets, each list representing each condition
+5. The key is the index of the list, and it represents the row/col/grid we are currently on, and the set represents all the values within that row/col/grid
+6. To do #3, must check which grid using an if condition based on x and y
+
+### 3 sum
