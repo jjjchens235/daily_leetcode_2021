@@ -141,3 +141,5 @@ I want to follow the following routine for each problem, taken from Cracking the
 6. To do #3, must check which grid using an if condition based on x and y
 
 ### 3 sum
+1. Logic: https://fizzbuzzed.com/top-interview-questions-1/#:~:text=A%20basic%2C%20O(n3,just%20use%20three%20for%20loops.
+2. Experience: I implemented this myself but mis-read duplicates, I thought it meant the list itself couldn't contain duplicates, i.e [[1,1,1]], but what it really means is that the list cannot contain the same 3 numbers i.e. [[1,2,3], [3,2,1]] is not allowed
