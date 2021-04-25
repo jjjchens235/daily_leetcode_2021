@@ -143,3 +143,13 @@ I want to follow the following routine for each problem, taken from Cracking the
 ### 3 sum
 1. Logic: https://fizzbuzzed.com/top-interview-questions-1/#:~:text=A%20basic%2C%20O(n3,just%20use%20three%20for%20loops.
 2. Experience: I implemented this myself but mis-read duplicates, I thought it meant the list itself couldn't contain duplicates, i.e [[1,1,1]], but what it really means is that the list cannot contain the same 3 numbers i.e. [[1,2,3], [3,2,1]] is not allowed
+
+### set zeroes
+1. Logic: 
+	1. time complexity O(m * n) and space complexity of O(m * n) 		- is pretty simple two pass solution. On the first pass, for every zero, you save it's row and col number into a separate set.
+		- On second pass, for if i exists in row_set, or j exists in col_set, then we convert this matrix[i][j] value to 0
+	2. time complexity O(m * n) and space complexity of O(1) is more difficult to achieve.
+		- Basically you have to store the zero values within the matrix itself, but you can't overwrite the values after because then you would create an increasing cascasde of zeroes.
+		- For all matching rows/cols of a zero, I changed the variable to 'x' as a flag, excluding cells that were already zeroes
+		- The solution indicates that you can simply save the first row/col of the zero, rather than saving a x flag
+

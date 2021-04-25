@@ -104,3 +104,12 @@ I want to follow the following routine for each problem, taken from Cracking the
 3. Takeaways
 	- Shouldn't always default to dictionaries, when comparing strings against each other, oftentimes using list notation is good enough
 
+### group anagram
+1. logic: An str is an anagram of another str if after sorting each of the strings, they equal each other. To create a list of anagrams, we can sort each str in strs, and place it in a dictionary where k: v is sorted(str): [anagrams].
+2. experience: pretty easy problem
+
+### longest substring without repeats
+1. logic: Two pointer, keep track of left and right. Left signifies the start of the window, right signifies the current end of the window.
+	- for each right, add it to a dictionary, where k: v is char: index.
+	- If s[right] already exists in the dictionary, then we need to move left to right + 1
+2. Experience: my instincts were good that this was a sliding window problem and that we needed to keep track of the position of each string. It might be worth doing again though bc this problem is quite tricky
