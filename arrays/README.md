@@ -153,3 +153,9 @@ I want to follow the following routine for each problem, taken from Cracking the
 		- For all matching rows/cols of a zero, I changed the variable to 'x' as a flag, excluding cells that were already zeroes
 		- The solution indicates that you can simply save the first row/col of the zero, rather than saving a x flag
 
+### Increasing Triplet Subsequence
+1. Logic: Keep track of minimum number and second minimum number. If current number is greater than second minimum number, than it's a valid triplet.
+2. Experience: Spent thirty minutes talking with Shing about this problem, then was able to solve it in one-go. We were pretty lost at first, but Shing kept asking, what is the thing we need to at each position to determine if this is the 3rd increasing substring? That helped.
+3. Takeaways: 
+	- One 'aha' moment was to simplify the problem, how would we find increasing double subsequence? That's trivial, you just need to keep track of the minimum number, and if you reach a number bigger than the min number, than it's true. From that logic, for triplets, we just need to keep track of the two smallest minimum numbers. Obviously, it's a little more complicated than that because we have to ensure the second smallest number comes after the minimum
+	- The other was coming up with a good test scenario- Shing thought up 8,9 , 3, 11. What do we do at the 3?
