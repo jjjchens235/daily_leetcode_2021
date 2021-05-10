@@ -113,3 +113,12 @@ I want to follow the following routine for each problem, taken from Cracking the
 	- for each right, add it to a dictionary, where k: v is char: index.
 	- If s[right] already exists in the dictionary, then we need to move left to right + 1
 2. Experience: my instincts were good that this was a sliding window problem and that we needed to keep track of the position of each string. It might be worth doing again though bc this problem is quite tricky
+
+### Palindromic Substrings
+1. Logic: 
+	- For every char, treat it as the 'center' and compare its left and right elements with each other. If matching, continue, else break since no longer palindrome
+	- Make sure to check for both even and odd length palindrome using the same 'center'
+2. Experience: I looked at a hint, where I found out we wouldn't have to duplicate work by using a 'center'
+3. Takeaways: 
+	- To find a palindrome, often times it's a center problem. Each character is the 'center', and we bubble left and right from the center and compare those left and right characters against each other.
+	- Palindromes can be both even and odd lengthed, meaning at each 'center', there are two conditons you need to check

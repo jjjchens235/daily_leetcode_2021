@@ -1,0 +1,2 @@
+def maxProduct(nums):
+    pass

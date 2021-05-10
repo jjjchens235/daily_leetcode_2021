@@ -86,10 +86,11 @@ I want to follow the following routine for each problem, taken from Cracking the
 	- Also, I didn't realize that all numbers either occured once or twice, I thought duplicates could appear more than once, I need to be careful about these little details because the set solution requires duplicates only appearing twice
 
 
-### intersection
+### 349. Intersection of Two Arrays
 
 1. Logic
-	- Simple solution using set, however, much harder if you have O(n) time and O(1) space complexity for sorted lists.
+	- Simple solution using set built in intersection function
+	- Another solution involves sorting the two lists, and then using a two pointer solution
 2. Experience
 	- df
 3. Takeaways
@@ -159,3 +160,22 @@ I want to follow the following routine for each problem, taken from Cracking the
 3. Takeaways: 
 	- One 'aha' moment was to simplify the problem, how would we find increasing double subsequence? That's trivial, you just need to keep track of the minimum number, and if you reach a number bigger than the min number, than it's true. From that logic, for triplets, we just need to keep track of the two smallest minimum numbers. Obviously, it's a little more complicated than that because we have to ensure the second smallest number comes after the minimum
 	- The other was coming up with a good test scenario- Shing thought up 8,9 , 3, 11. What do we do at the 3?
+
+### Contains Duplicate
+1. Logic
+	- compare len of nums against set(nums)
+2. Experience
+	- df
+3. Takeaways
+	- df
+
+### 238. Product of Array Except Self
+1. Logic
+	- 
+2. Experience
+	- I was laughing at how absurdly easy i thought this problemwould be, but joke's on me, I cannot figure out how to handle zeroes correctly. There's two issues with the zero
+		- I lose track of the total product
+		- when trying to figure out the remaining product, I divide by the current num, which is zero, and i get div zero error
+3. Takeaways
+	- df
+
