@@ -47,4 +47,17 @@ For each challenging question, I will provide the following:
 	2. Takeaways
 		- For contigious problems, use row_number() windows function to be able to group contiguous ranges together, in this case you would do something like diff = date_add(success_date, - row_number())
 
-6. 
+6. 1709 - biggest window
+	1. Logic: Immediately knew this was a lag/lead question, with a group by and max() logic, but the hard part was including the 2021-01-01 logic
+	2. Takeaways:
+		- I could not for the life of me figure out how to add the 2021-01-01 while using lag, the trick is to use lead() combined with coalesce()
+
+7. 1633 - percentage of users attended a contest
+	1. Takeaway: You can create a derived column using a subquery, i.e 
+``` sql
+select main.\*, (select new_field from tmp) derived_field
+```
+
+8. 
+
+

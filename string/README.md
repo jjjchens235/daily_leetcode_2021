@@ -122,3 +122,17 @@ I want to follow the following routine for each problem, taken from Cracking the
 3. Takeaways: 
 	- To find a palindrome, often times it's a center problem. Each character is the 'center', and we bubble left and right from the center and compare those left and right characters against each other.
 	- Palindromes can be both even and odd lengthed, meaning at each 'center', there are two conditons you need to check
+
+### Num unique emails
+1. Logic
+	- For each email, apply the following rules:
+		- remove periods from the first half of string
+    - remove all words on and after the +
+    - Push the updated word into a set
+    - Return the length of the set
+2. Experience
+	- smooth except one mess-up, I didn't include the '@' back into the split string when concatting, I had to use a print statement to debug this, wasn't able to figure this out by walking through the code
+3. Takeaways
+	- Don't forgot about the word you split on if you need to re-concat string, in this case the '@'
+	- If you need to find the index of the first occurrence of a char in a string/list, you can use index(), be aware that it returns a ValueError() if no element found, so better to check if exists in str/list
+
