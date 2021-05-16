@@ -58,6 +58,28 @@ For each challenging question, I will provide the following:
 select main.\*, (select new_field from tmp) derived_field
 ```
 
-8. 
+8. 596: Median Salary
+	1. Logic:
+		-  You need to rank the rows on salary partitioned by company
+		- You also need the count partitioned by company. The trick here is to divide the count by 2, if odd, you will get a number like 4.5, if even you will get a round number like 5.
+		- So lets say count_div = count / 2. The median is always equal to all numbers between (count_div , count_div + 1)
+		- [circle coder source](https://circlecoder.com/median-employee-salary/)
+	2. Experience: I had most of the intuition right and after playing around with this in sql fiddle I was able to solve it without help, however, not in the first straight shot. The above logic uses a `where between clause`, whereas I used a `where case when clause`, which was definitely not as clean
+	3.  Takeaways:
+		- Need to better think out the whole problem before coding it, i.e I wasn't fully sure how I was going to get the median once I had salaries ranked and had the count. My intution told me that's all that was needed but I wasn't fully sure and I didn't flesh it out.
+		- Median properties:
+			- If odd, the median is always count / 2 , rounded up, i.e if there are 9 numbers, then it's 4.5 rounded  up, i.e the 5th number
+			- If even, the median is always count / 2 AND count /2 + 1
+		- Between clause, I have never used this before - it's quite nice
+9. 1454: active users
+	1. Logic
+		- This problem is tough! I feel like it should be classified as hard. I ended up using logic similiar to 'contiguious dates' problem
+		- First, using dense_rank() group contigious dates by users together, make sure to use distinct to remove duplicate same day logins 
+		- Group by user/ contigious dates, check if any are above a count of 4
+		- Join with employee table to get the name
+	2. Experience: was stuck for a pretty long time on this, wasn't sure if I wanted to commit time to solving it contiguous style, ended up committing to it.
+10. 534: Game Play Analysis #3
+	1. Takeaways: For running totals, use sum() windows function, don't forget to add an argument to sum(), like sum(games_played)
 
-
+11. 608: Tree Node
+	1. Experience: Frankly, I didn't feel like doing this one, seems like an edge-case problem
