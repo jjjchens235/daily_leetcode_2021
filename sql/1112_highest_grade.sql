@@ -17,4 +17,3 @@ FROM
   ) base
 WHERE
   ranked = 1
-

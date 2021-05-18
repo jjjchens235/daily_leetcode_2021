@@ -81,5 +81,11 @@ select main.\*, (select new_field from tmp) derived_field
 10. 534: Game Play Analysis #3
 	1. Takeaways: For running totals, use sum() windows function, don't forget to add an argument to sum(), like sum(games_played)
 
-11. 608: Tree Node
-	1. Experience: Frankly, I didn't feel like doing this one, seems like an edge-case problem
+11. 1484: Group products
+	1. Takeaways: This problem is very easy if you know about the sql built in method group_concat() . This is the name of the function in mysql, in postgres it's called something else.
+
+12. 570: Managers with more than 5 employees
+	1. Takeaways: Still not the strongest with self joins. One question to ask ourselves is what do we want to lookup? In this case, we want to know who the manager is, so use e.managerid to lookup the manager
+
+13. 1795: Rearrange Products table
+	1. Experience: I was not able to devise a solution for this problem, didn't occur to me to use union, I was really stuck on the idea of 'unpivoting' which I think would work as well, but I sensed that there had to be an easier way especially given the fact that there were only 3 stores
