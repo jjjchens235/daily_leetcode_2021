@@ -89,3 +89,10 @@ select main.\*, (select new_field from tmp) derived_field
 
 13. 1795: Rearrange Products table
 	1. Experience: I was not able to devise a solution for this problem, didn't occur to me to use union, I was really stuck on the idea of 'unpivoting' which I think would work as well, but I sensed that there had to be an easier way especially given the fact that there were only 3 stores
+
+14. 1511: Customer Order frequency
+	1. Experience: Despite this being an easy problem, I wasn't originally sure how to proceed with separating June and July
+	2. Takeaways: Need to separate the two months  into separate fields using case statement, afterwards, can do a group by, and having(sum > 100)
+
+15. 1127: User Purchase
+	1. Experience: This problem is pretty rough, wasn't able to solve it fully in the end and I don't think it's worth more time to invest in it. I'm basically missing a final row where no one bought from that category (the 'both' category)
