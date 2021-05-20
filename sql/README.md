@@ -96,3 +96,13 @@ select main.\*, (select new_field from tmp) derived_field
 
 15. 1127: User Purchase
 	1. Experience: This problem is pretty rough, wasn't able to solve it fully in the end and I don't think it's worth more time to invest in it. I'm basically missing a final row where no one bought from that category (the 'both' category)
+
+16. 1355: activity participants
+	1. Experience: I was stumped for a little trying to figure out how to tie everything together, eventually I went with a chain CTE solution that I thought was pretty clean.
+	2. Logic: The github solution does things slightly differently using a `having not in ( select max union select min )`
+
+17. 1194 Tournament
+	1. Experience: I implemented a clean CTE solution, but this problem is a good one, worth doing again
+
+18. 1596: The Most Frequently Ordered Products for Each Customer
+	1. Experience: This one took me a little longer than I would like, I didn't recognize the pattern immediately, which is you need to group by customer/product/ count as product_count, then a second group by like customer, max(product_count) all chained together as CTE
