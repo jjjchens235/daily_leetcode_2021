@@ -106,3 +106,14 @@ select main.\*, (select new_field from tmp) derived_field
 
 18. 1596: The Most Frequently Ordered Products for Each Customer
 	1. Experience: This one took me a little longer than I would like, I didn't recognize the pattern immediately, which is you need to group by customer/product/ count as product_count, then a second group by like customer, max(product_count) all chained together as CTE
+
+19. 574: Winning Canididate
+	1. Easier than 1194, but simpler.
+
+20. 1555: Bank Balance
+	1. Experience: Not bad, but good practice
+	2. Logic: Located inside the sql problem 1555_
+
+21. 1393: Capital Gain /Loss
+	1. Experience: Very similar to 1555
+	2. Logic: Located inside the sql problem 1555_*
