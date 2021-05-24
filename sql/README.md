@@ -116,4 +116,7 @@ select main.\*, (select new_field from tmp) derived_field
 
 21. 1393: Capital Gain /Loss
 	1. Experience: Very similar to 1555
-	2. Logic: Located inside the sql problem 1555_*
+	2. Logic: Located inside the sql problem 1555_
+22. 1412: queit student
+	1. Experience: tough problem, requires some thinking, worth doing again
+	2. Logic: Located inside the sql problem 1412
