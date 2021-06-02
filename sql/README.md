@@ -120,3 +120,25 @@ select main.\*, (select new_field from tmp) derived_field
 22. 1412: queit student
 	1. Experience: tough problem, requires some thinking, worth doing again
 	2. Logic: Located inside the sql problem 1412
+23. 1364: Number of Trusted Contacts of a Customer
+	1. Takeaways: contact_ct and trusted_contacts_ct should optimally be done with one group by, in my first solution, I used two CTE's to represent this, but it's better to use a single GROUP BY and LEFT JOIN to represent this instead
+22. 1440: Evaluate Expression
+	1. Experience: An unique problem, ended up looking at the solution, and it's a CASE WHEN problem
+	2. Takeaways: Inside the case when `THEN x > y`, I would have thought this would be coerced to either True or False, but it actually returns 1 or 0
+23. 1445: Apples and Oranges
+	1. Takeaways: 
+		- My solution used a case when to create two columns, one for apples and one for oranges.
+		- Alternatively, the kamyu solution creates an apple table and an orange table and then rejoins them. The diff is calculated like so: apples.sold_num - oranges.sold_num
+24. 1204: Last person to fit in elevator
+	1. Experience: It took me a second to figure out how to get the person with the max running_weight total. In the end, I used `ORDER BY DESC LIMIT 1`
+25. 1715: Count Apples and Oranges
+	1. Takeaways: My solution is decent but kamayu's solution is better. It doesn't use an UNION, instead with the cte itself, the apple counts from the box and the chest are added up as one field
+26. 
+26. 550: Game Play Analysis 5
+	1. Takeaways
+		- Kamyu solution, the right join is the trickiest part here, you're actually taking your 3 distinct players from the group by, and checking whcih ones join successfully on the main Activity table, I would not have thought of this tbh
+		- The other tricky part is realizing you can join by the date - 1, instead of using lag windows function
+27. 1767: Find the subtasks that did not execute
+	1. Experience: This is a recursive CTE problem, I didn't bother with this
+28.  626: Exchange Seats
+	- Experience: I had seen a video on this problem, apparently it's a problem beloved by Amazon. Therefore, I need I should case when statements combined with mod, interesting problem nonetheless
